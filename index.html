@@ -20,6 +20,32 @@
   <!-- Latest compiled JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script src="js/jquery.magnific-popup.min.js"></script>
+  <script>
+  $(document).ready(function(){
+    // Add smooth scrolling to all links
+    $("ul a").on('click', function(event) {
+
+      // Make sure this.hash has a value before overriding default behavior
+      if (this.hash !== "") {
+        // Prevent default anchor click behavior
+        event.preventDefault();
+
+        // Store hash
+        var hash = this.hash;
+
+        // Using jQuery's animate() method to add smooth page scroll
+        // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+        $('html, body').animate({
+          scrollTop: $(hash).offset().top
+        }, 800, function(){
+
+          // Add hash (#) to URL when done scrolling (default click behavior)
+          window.location.hash = hash;
+        });
+      } // End if
+    });
+  });
+  </script>
 </head>
 <body>
   <!-- NAVIGATION STARTS------------------------------------->
@@ -36,12 +62,11 @@
       </div>
       <div class="collapse navbar-collapse" id="navi">
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#services">Our Services</a></li>
-          <li><a href="#home">Works</a></li>
-          <li><a href="#home">Team</a></li>
-          <li><a href="#home">About Us</a></li>
-          <li><a href="#home">Carrier</a></li>
+          <li><a href="#slider">Home</a></li>
+          <li><a href="#services">Tech</a></li>
+          <li><a href="#work">Gallery</a></li>
+          <li><a href="#projects">Portfolio</a></li>
+          <li><a href="#testimonial">About Me</a></li>
           <li><a href="mailTo:fernandocastanon777@gmail.com" class="location">GET IN TOUCH</a></li>
         </ul>
       </div>
@@ -237,7 +262,7 @@
   </section>
 
   <!-- WOrK SECTION MOCKUP -->
-  <section class="teams">
+  <section id="projects" class="teams">
     <div class="container text-center">
       <h2><b>PORTFOLIO<b></h2>
         <p>These are cliens I have worked with the most in the past year.</p>
@@ -249,58 +274,38 @@
         <div class="col-md-12">
           <div id="team-members" class="owl-carousel owl-theme">
             <div class="team-member">
-              <img src="gifs/react-imdb-project.gif" class="img-responsive" alt="">
+              <img src="gifs/react-imdb.gif" class="img-responsive" alt="">
               <div class="team-member-info text-center">
                 <h4 class="team-memmber-name">React/Movie DB API</h4>
-                <h4 class="team-member-designation">Barricade Podcast</h4>
-                <ul class="social-list">
-                  <li><a href="#" class="social-icon icon-gray"><i class="fa fa-facebook"></i></a></li>
-                  <li><a href="#" class="social-icon icon-gray"><i class="fa fa-google-plus"></i></a></li>
-                  <li><a href="#" class="social-icon icon-gray"><i class="fa fa-twitter"></i></a></li>
-                  <li><a href="#" class="social-icon icon-gray"><i class="fa fa-instagram"></i></a></li>
-                </ul>
+                <h4 class="team-member-designation">Movie Info App</h4>
+                <a href="https://react-imdb-app.netlify.com/" target="_blank">Go to site</a>
               </div>
             </div>
 
             <div class="team-member">
-              <img src="https://specials-images.forbesimg.com/imageserve/5a8d90fd4bbe6f2652f61c15/416x416.jpg?background=000000&cropX1=0&cropX2=1999&cropY1=159&cropY2=2159" class="img-responsive"alt="">
+              <img src="gifs/hotel-booking-app.gif" class="img-responsive"alt="">
               <div class="team-member-info text-center">
-                <h4 class="team-memmber-name">Harmonie</h4>
-                <h4 class="team-member-designation">Barricade Podcast</h4>
-                <ul class="social-list">
-                  <li><a href="#" class="social-icon icon-gray"><i class="fa fa-facebook"></i></a></li>
-                  <li><a href="#" class="social-icon icon-gray"><i class="fa fa-google-plus"></i></a></li>
-                  <li><a href="#" class="social-icon icon-gray"><i class="fa fa-twitter"></i></a></li>
-                  <li><a href="#" class="social-icon icon-gray"><i class="fa fa-instagram"></i></a></li>
-                </ul>
+                <h4 class="team-memmber-name">React/Redux</h4>
+                <h4 class="team-member-designation">Hotel Booking App</h4>
+                <a href="https://fernando-daniel.github.io/hotel-booking-app/#/" target="_blank">Go to site</a>
               </div>
             </div>
 
             <div class="team-member">
-              <img src="https://specials-images.forbesimg.com/imageserve/5a8d90fd4bbe6f2652f61c15/416x416.jpg?background=000000&cropX1=0&cropX2=1999&cropY1=159&cropY2=2159" class="img-responsive"alt="">
+              <img src="gifs/burger.gif" class="img-responsive"alt="">
               <div class="team-member-info text-center">
-                <h4 class="team-memmber-name">Harmonie</h4>
-                <h4 class="team-member-designation">Barricade Podcast</h4>
-                <ul class="social-list">
-                  <li><a href="#" class="social-icon icon-gray"><i class="fa fa-facebook"></i></a></li>
-                  <li><a href="#" class="social-icon icon-gray"><i class="fa fa-google-plus"></i></a></li>
-                  <li><a href="#" class="social-icon icon-gray"><i class="fa fa-twitter"></i></a></li>
-                  <li><a href="#" class="social-icon icon-gray"><i class="fa fa-instagram"></i></a></li>
-                </ul>
+                <h4 class="team-memmber-name">React (basic)</h4>
+                <h4 class="team-member-designation">Burger Builder</h4>
+                <a href="https://fernando-daniel.github.io/burger-builder/" target="_blank">Go to site</a>
               </div>
             </div>
 
             <div class="team-member">
-              <img src="https://specials-images.forbesimg.com/imageserve/5a8d90fd4bbe6f2652f61c15/416x416.jpg?background=000000&cropX1=0&cropX2=1999&cropY1=159&cropY2=2159" class="img-responsive"alt="">
+              <img src="gifs/twitter-coming-soon.gif" class="img-responsive"alt="">
               <div class="team-member-info text-center">
-                <h4 class="team-memmber-name">Harmonie</h4>
-                <h4 class="team-member-designation">Barricade Podcast</h4>
-                <ul class="social-list">
-                  <li><a href="#" class="social-icon icon-gray"><i class="fa fa-facebook"></i></a></li>
-                  <li><a href="#" class="social-icon icon-gray"><i class="fa fa-google-plus"></i></a></li>
-                  <li><a href="#" class="social-icon icon-gray"><i class="fa fa-twitter"></i></a></li>
-                  <li><a href="#" class="social-icon icon-gray"><i class="fa fa-instagram"></i></a></li>
-                </ul>
+                <h4 class="team-memmber-name">MERN Stack</h4>
+                <h4 class="team-member-designation">Twitter Clone</h4>
+                <a href="https://react-imdb-app.netlify.com/" target="_blank">Coming soon</a>
               </div>
             </div>
 
@@ -336,62 +341,46 @@
               <div class="item active text-center">
                 <img src="img/me.png" alt="me" class="center-block">
                 <h2>FERNANDO CASTANON</h2>
-                <h4>REACT DEVELOPER</h4>
-                <p>I am a 23 year old self taught developer in Los Angeles.</p>
+                <h4>Aspiring Developer</h4>
+                <p>
+                  I am an aspiring Junior Full Stack Developer. I am well versed in
+                  Front End technologies such as HTML, CSS, JavaScript, & React. I am
+                  familiar with PHP and MySQL. I am currently getting better at Front
+                  End Development, while learning/embracing Back End technologies such
+                  as Node, Express, and Firebase. My goal is to get a Developer job in
+                  Los Angeles to bring value to your company.
+                </P>
               </div>
 
               <div class="item text-center">
                 <img src="img/me.png" alt="me" class="center-block">
                 <h2>FERNANDO CASTANON</h2>
-                <h4>RESCT DEVELOPER</h4>
-                <p>Web Development has ben a hobby of mine for about two years</p>
+                <h4>LOVES READING FICTION</h4>
+                <p>
+                  I am an aspiring Junior Full Stack Developer. I am well versed in
+                  Front End technologies such as HTML, CSS, JavaScript, & React. I am
+                  familiar with PHP and MySQL. I am currently getting better at Front
+                  End Development, while learning/embracing Back End technologies such
+                  as Node, Express, and Firebase. My goal is to get a Developer job in
+                  Los Angeles to bring value to your company.
+                </P>
               </div>
 
               <div class="item text-center">
                 <img src="img/me.png" alt="me" class="center-block">
                 <h2>FERNANDO CASTANON</h2>
-                <h4>REACT DEVELOPER</h4>
-                <p>Currently looking for work as a Front End d</p>
+                <h4>Enjoys listening to Podcasts</h4>
+                <p>
+                  I am an aspiring Junior Full Stack Developer. I am well versed in
+                  Front End technologies such as HTML, CSS, JavaScript, & React. I am
+                  familiar with PHP and MySQL. I am currently getting better at Front
+                  End Development, while learning/embracing Back End technologies such
+                  as Node, Express, and Firebase. My goal is to get a Developer job in
+                  Los Angeles to bring value to your company.
+                </P>
               </div>
             </div>
           </div>
-
-          <section class="intro-area white text-center" id="intro">
-            <div class="container">
-              <div class="row">
-                <h2>FUN FACTS</h2>
-              </div>
-
-              <div class="row">
-                <div class="col-sm-4">
-                  <div class="intro-block">
-                    <span class="intro-icon"><i class="fa fa-paint-brush"></i></span>
-                    <h3>BOOKSt</h3>
-                    <p>I love listening to audiables and podcast. One book that I
-                    am currently listening to is "Can't Hurt Me" by David Goggins a retired Navy Seal
-                    on how to build mental toughness.</p>
-                  </div>
-                </div>
-                <div class="col-sm-4">
-                  <div class="intro-block">
-                    <span class="intro-icon"><i class="fa fa-paint-brush"></i></span>
-                    <h3>HIKES</h3>
-                    <p>I enjoy going on early morning walks in Echo Park on the weekends. The </p>
-                  </div>
-                </div>
-                <div class="col-sm-4">
-                  <div class="intro-block">
-                    <span class="intro-icon"><i class="fa fa-paint-brush"></i></span>
-                    <h3>CODING</h3>
-                    <p>I love learning new technologies and techniques that will help
-                    me in my future as a developer. I truly enjoy building websites/apps
-                    the </p>
-                  </div>
-                </div>
-
-              </div>
-            </div>
-          </section>
 
         </div>
       </div>
@@ -405,16 +394,10 @@
     </div>
   </footer>
 
-
-<script src="js/countUp.js"></script>
-<script src="js/countUp-jquery.js"></script>
 <script src="js/jquery.superslides.js"></script>
-<script src="js/jquery.easypiechart.min.js"></script>
 <script src="js/owl.carousel.min.js"></script>
-<script src="js/typed.min.js"></script>
 <script src="https://unpkg.com/isotope-layout@3.0.5/dist/isotope.pkgd.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-<script src="js/script.js"></script>
 <script src="js/typed.min.js"></script>
 <script src="js/main.js"></script>
 </body>
