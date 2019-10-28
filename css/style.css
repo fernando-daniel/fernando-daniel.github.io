@@ -885,3 +885,9 @@ footer {
 .intro-block:hover h3, .intro-block:hover p {
   color: #f6f6f6;
 }
+
+#testimonial .banner {
+  background: #000;
+  opacity: 0.9;
+  padding: 10px;
+}
